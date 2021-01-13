@@ -16,10 +16,10 @@ const numberList =  [
     ["nine","9"],
     ["dot","."]
 ];
-const lightgreyList =["c", "+/-", "%"];
+const lightgreyList =["C", "+/-", "%"];
 const orangeList = ["/", "x", "-", "+", "="];
 
-const style = {};
+// const style = {};
 
 const Calculator = () => {
     const [value, setValue] = useState("");
@@ -97,7 +97,6 @@ const Calculator = () => {
             // if button === + - x /
             if (value !== "") calculate(value);
             setOperation(button);
-
             if (button === "=") setDisplay(result);
         }
         setValue("");
@@ -117,15 +116,14 @@ const Calculator = () => {
             setDisplay(percentage.toFixed(4));
         }
     }, [percentage]);
-
-
-    console.log("value", value);
+      console.log("value", value);
       console.log("result", result);
       console.log("operation", operation);
+      console.log("display", display)
       console.log("------------");
       return (
         <div className="container">
-            <p className="result">{display || "0"}</p>
+            <p className="result">{ display || "0" }</p>
             <div className="lightgrey">
                 {lightgreyList.map((name, index) =>
                     <OperatorButton name={name} key={index} color="lightgrey" onClickOperation={onClickOperation}/>

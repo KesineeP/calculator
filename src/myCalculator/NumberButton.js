@@ -9,7 +9,7 @@ export default function NumberButton({name, areaName, onClickNumber}) {
         color: "#ffffff",
         border: "1px solid #3b3b3b",
         fontSize: "40px",
-        borderRadius: "50px"
+        borderRadius: "90px"
         },
         zero: {
             textAlign: "left",
@@ -25,7 +25,7 @@ export default function NumberButton({name, areaName, onClickNumber}) {
         <button
             style={theStyle}
             className="numButton"
-            nClick={() => onClickNumber(name)}
+            onClick={() => onClickNumber(name)}
         >
             {name}
         </button>
