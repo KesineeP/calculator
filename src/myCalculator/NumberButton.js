@@ -1,7 +1,7 @@
 import React from 'react';
 import './NumberButton.css';
 
-export default function NumberButton({name, areaName}) {
+export default function NumberButton({name, areaName, onClickNumber}) {
     const style = {
         default: {
         gridArea: areaName,
@@ -9,7 +9,7 @@ export default function NumberButton({name, areaName}) {
         color: "#ffffff",
         border: "1px solid #3b3b3b",
         fontSize: "40px",
-        borderRadius: "90px"
+        borderRadius: "50px"
         },
         zero: {
             textAlign: "left",
@@ -20,7 +20,14 @@ export default function NumberButton({name, areaName}) {
 
     let theStyle = style.default;
     if(areaName === "zero") theStyle = {...style.default, ...style.zero}
+
     return (
-        <button style={theStyle} className="numButton">{name}</button>
-    )
+        <button
+            style={theStyle}
+            className="numButton"
+            nClick={() => onClickNumber(name)}
+        >
+            {name}
+        </button>
+    );
 }
