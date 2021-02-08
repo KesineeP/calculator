@@ -1,5 +1,4 @@
 import React from 'react';
-import './NumberButton.css';
 
 export default function NumberButton({name, areaName, onClickNumber}) {
     const style = {

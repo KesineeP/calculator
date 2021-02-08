@@ -1,6 +1,6 @@
 
-import Calculator from "./Calculator";
+import Calculator from './Calculator';
 
 
 
-export default Calculator
+export default Calculator;
