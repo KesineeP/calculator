@@ -5,6 +5,7 @@
     background-color: #000000;
     width: 600px;
     height: 1050px;
+    margin: 20px;
 }
 
 .result {
@@ -12,7 +13,7 @@
     color: #ffffff;
     grid-column: 1/5;
     grid-row: 1/2;
-    font-size: 150px;
+    font-size: 180px;
     font-weight: 300;
     margin: 0;
     padding-right: 20px;
@@ -53,4 +54,15 @@
     grid-row: 3/7;
     gap: 10px;
     padding: 5px 5px 10px 10px;
+}
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 40%;
+        height: 90%;
+        margin: 20px;
+    }
+    .result {
+        font-size: 100px;
+        padding: 0 15px 0 0;
+    }
 }

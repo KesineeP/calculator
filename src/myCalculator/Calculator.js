@@ -11,7 +11,7 @@ const numberList =  [
     ["four", "4"],
     ["five", "5"],
     ["six","6"],
-    ["seven","7"],s
+    ["seven","7"],
     ["eight","8"],
     ["nine","9"],
     ["dot","."]
@@ -37,7 +37,7 @@ const Calculator = () => {
             setValue(value.concat(num));
         }
         setDisplay(value.concat(num));
-        setLadtButtonPressed("number");
+        setLastButtonPressed("number");
     };
 
     const calculate = (valueOrPercent) => {
